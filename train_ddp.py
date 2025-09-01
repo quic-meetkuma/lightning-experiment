@@ -101,7 +101,7 @@ formatted_date_time = now.strftime("%Y_%m_%d_%H_%M_%S")
 exp_path = os.path.join(tr_config.train_data_path, formatted_date_time)
 
 os.makedirs(tr_config.train_data_path, exist_ok=True)
-os.makedirs(exp_path)
+os.makedirs(exp_path, exist_ok=True)
 
 
 trainer = L.Trainer(
