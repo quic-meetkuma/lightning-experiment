@@ -109,8 +109,6 @@ trainer = L.Trainer(
     devices=2,
     strategy="ddp",
     max_epochs=tr_config.num_epochs,
-    # strategy=SingleDeviceStrategy(device="qaic"),
-    # strategy=DDPStrategy(device="qaic"),
 )
 
 trainer.fit(pl_module, train_dataset, test_dataset)
